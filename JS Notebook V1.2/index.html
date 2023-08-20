@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="marked.min.js"></script>
+    <title>Markdown Notepad</title>
+</head>
+<body>
+    <header>
+        <h1>Markdown Notepad</h1>
+    </header>
+    <main>
+        <div class="note-form">
+            <label for="titleInput">Title:</label>
+            <input type="text" id="titleInput" placeholder="Title">
+            <textarea id="noteInput" placeholder="Your note (supports Markdown)"></textarea>
+            <button id="addNote">Add Note</button>
+        </div>
+        <div class="notes" id="notes"></div>
+        <div id="editNoteModal" class="modal">
+            <div class="modal-content">
+                <textarea id="editedNoteContent"></textarea>
+                <button id="saveEditedNote">Save</button>
+                <button id="cancelEdit">Cancel</button>
+            </div>
+        </div>
+        <div id="deleteNoteModal" class="modal">
+            <div class="modal-content">
+                <p>Are you sure you want to delete this note?</p>
+                <button id="confirmDelete">Yes</button>
+                <button id="cancelDelete">No</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
