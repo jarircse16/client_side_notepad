@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <script src="./resources/js/marked.js"></script>
+    <script src="./resources/js/marked.min.js"></script>
+    <title>JS Notepad</title>
+</head>
+<body>
+    <header>
+        <h1>JS Notepad</h1>
+    </header>
+    <main>
+        <div class="note-form">
+            <label for="titleInput">Title:</label>
+            <input type="text" id="titleInput" placeholder="Title">
+            <div id="titlePreview"></div> <!-- Title Preview -->
+            <textarea id="noteInput" placeholder="Your note (supports Markdown)"></textarea>
+            <div id="notePreview"></div> <!-- Note Preview -->
+            <button id="addNote" class="primary-button">Add Note</button>
+            <button id="saveNotes" class="primary-button">Save Notes</button> <!-- Button to save notes -->
+            <button id="loadNotes" class="primary-button">Load Notes</button> <!-- Button to load notes -->
+        </div>
+        <div class="notes" id="notes"></div>
+        <div id="editNoteModal" class="modal">
+            <div class="modal-content">
+                <input type="text" id="editedTitleInput" placeholder="Title"> <!-- Edited Title Input -->
+                <textarea id="editedNoteContent"></textarea>
+                <button id="saveEditedNote" class="primary-button">Save</button>
+                <button id="cancelEdit" class="secondary-button">Cancel</button>
+            </div>
+        </div>
+        <div id="deleteNoteModal" class="modal">
+            <div class="modal-content">
+                <p>Are you sure you want to delete this note?</p>
+                <button id="confirmDelete" class="secondary-button">Yes</button>
+                <button id="cancelDelete" class="secondary-button">No</button>
+            </div>
+        </div>
+    </main>
+    <script src="./resources/js/script.js"></script>
+</body>
+</html>
